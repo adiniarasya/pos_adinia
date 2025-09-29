@@ -23,7 +23,7 @@
                 {{ csrf_field() }}
                 @method('DELETE')
                 <a href="{{ route('customer.edit', $v->customer_id) }}">Edit</a>
-                <button type="submit" onclick="return confirm('Are you sure want to delete this category?')">Delete</button>  
+                <button type="submit" onclick="return confirm('Are you sure want to delete this customers?')">Delete</button>  
                 </form>                
             </td>
         </tr>

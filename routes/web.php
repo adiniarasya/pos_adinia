@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\ProductsController;
 
 
 /*
@@ -41,4 +42,7 @@ Route::put('/customer/{id}', [CustomersController::class, 'update'])->name('cust
 Route::delete('/customer/{id}', [CustomersController::class, 'destroy'])->name('customer.destroy');
 
 
-
+//Products Route
+Route::get('/products', [ProductsController::class,'index'])->name('products.index'); //untuk menampilkan data products
+Route::get('/products/create', [ProductsController::class,'create'])->name('products.create');
+Route::post('/products', [ProductsController::class,'store'])->name('products.store');
